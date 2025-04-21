@@ -99,6 +99,7 @@ function girar(id){
   if (pares == 8){
     winAudio.play() //Audio insertado
     clearInterval(tiempoRegresivo);
+    alert("icaito dice: Ganaste! 🎉");
     mostrarTiempo.innerHTML = `Fantastico! 🎉 Sólo demoraste ${timerInicial - timer - 1} segundos`;
     mostrarPuntaje.innerHTML = `Puntaje: ${puntaje} 😱`;
     mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 🤟‍‍😎`;
