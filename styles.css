@@ -2,7 +2,7 @@
 
 body {
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(111, 221, 111) 100%); 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comic sans mS';
   color: rgb(226, 88, 88);
 }
 
@@ -13,14 +13,39 @@ main {
 }
 
 .section1 {
-  background-color: rgba(255,255,255,0.2);
   padding: 0 10px 10px 10px;
   border-radius: 8px;
+  border: 2px dashed white;
   display: flex;
+  margin-top: -15px;
+  margin-bottom: 10px;
 }
 
 h1 {
   text-align: center;
+  margin-top: 120px;
+}
+
+@keyframes miAnimacion {
+  0% {
+    transform: scale(1);
+    color: blue;
+  }
+  50% {
+    transform: scale(1.2);
+    color: green;
+  }
+  100% {
+    transform: scale(1);
+    color: red;
+  }
+}
+
+h1 {
+  animation-name: miAnimacion;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 button {
@@ -31,41 +56,45 @@ button {
 }
 
 button:hover {
+  background-image: url("donde.png");
+  background-size: 13vh;
   cursor: pointer;
 }
 
 .section2 {
-  background-color: rgba(255,255,255,0.2);
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  padding: 0 20px 0;
+  background-image: url("favicon.png");
+  border: 1px solid red;
 }
 
 .estadisticas {
-  border: 1px solid white;
+  border: 2px solid black;
   height: 50px;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 8px 20px;
   box-sizing: border-box;
 }
 
 #puntaje {
+  color: green;
   font-size: 22px;
   font-weight: bold;
 }
 
 #restante {
+  color: red;
   font-size: 15px;
   font-weight: bold;
 }
 
 #movimientos {
+  color: green;
   font-size: 22px;
   font-weight: bold;
 }
 
 footer {
   text-align: center;
+  margin-top: -20px;
 }
 
 a {
@@ -76,7 +105,6 @@ img {
   width: 100%;
 }
 
-/*-------------------Desktop-----------*/
 @media (max-width: 750px) {
   main {
     display: flex;
